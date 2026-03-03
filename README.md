@@ -18,11 +18,11 @@ https://datawhalechina.github.io/repo-template
 
 |  章节名   | 简介 | 状态 |
 |  ----  | ---- | ---- |
-| [第1章  OpenClaw概览](https://github.com/datawhalechina/repo-template/blob/main/docs/chapter1)  | 多智能体框架的发展背景；OpenClaw 的核心理念与应用价值 | 🚧 | 
-| [第2章 核心原理深度剖析](https://github.com/datawhalechina/repo-template/blob/main/docs/chapter2)  | 节点（Node）与边（Edge）的调度逻辑；Skill 与 MCP 协议的交互机制 | 🚧 |
-| [第3章 环境配置与基础上手](https://github.com/datawhalechina/repo-template/blob/main/docs/chapter3)  | 基础环境搭建与 API 接入；第一个简单的 Agent 实例开发 | 🚧 |
-| [第4章 高阶案例——数学与物理符号推理 Agent](https://github.com/flying-fish-2025/math-physics/blob/main/docs/chapter1/chapter4.md)  | 需求分析：解决科学推导中的幻觉挑战；核心 Skill 实现：数学软件封装、知识库检索、LaTeX 自动生成；工作流优化：结果验证与多轮修正逻辑 | ✅ |
-| [第5章 生态扩展与社区案例精选](https://github.com/datawhalechina/repo-template/blob/main/docs/chapter5)  | ClawPhD：博士科研助手配置指南；PaperClaw 与 ChineseResearchLaTeX：文献处理与写作工作流整合；如何贡献你自己的 OpenClaw 案例 | 🚧 |
+| [第1章  OpenClaw概览]()  | 多智能体框架的发展背景；OpenClaw 的核心理念与应用价值 | 🚧 | 
+| [第2章 核心原理深度剖析]()  | 节点（Node）与边（Edge）的调度逻辑；Skill 与 MCP 协议的交互机制 | 🚧 |
+| [第3章 环境配置与基础上手]()  | 基础环境搭建与 API 接入；第一个简单的 Agent 实例开发 | 🚧 |
+| [第4章 高阶案例——数学与物理符号推理 Agent](https://github.com/flying-fish-2025/math-physics/blob/main/docs/chapter4/chapter4.md)  | 需求分析：解决科学推导中的幻觉挑战；核心 Skill 实现：数学软件封装、知识库检索、LaTeX 自动生成；工作流优化：结果验证与多轮修正逻辑 | ✅ |
+| [第5章 生态扩展与社区案例精选]()  | ClawPhD：博士科研助手配置指南；PaperClaw 与 ChineseResearchLaTeX：文献处理与写作工作流整合；如何贡献你自己的 OpenClaw 案例 | 🚧 |
 
 
 ## 贡献者名单
