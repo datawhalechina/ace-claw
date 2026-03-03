@@ -14,7 +14,6 @@
 https://datawhalechina.github.io/repo-template
 
 ## 目录
-*这里写你的项目目录，及其完成状态，已完成的部分添加上跳转链接*
 
 |  章节名   | 简介 | 状态 |
 |  ----  | ---- | ---- |
