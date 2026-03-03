@@ -3,12 +3,13 @@
 > [!CAUTION]
 > ⚠️ Alpha内测版本警告：此为早期内部构建版本，尚不完整且可能存在错误，欢迎大家提Issue反馈问题或建议。
 
-一个面向数学/物理推导的低幻觉智能体骨架：  
-核心思想是**让 LLM 只负责“决策与编排”**，把代数运算、微分方程求解、化简、验算等交给 OpenClaw 工具执行并返回可追溯结果。
+本项目致力于打造首个针对 **OpenClaw** 多智能体框架的深度开源学习教程。OpenClaw 作为一个灵活的 Agent 架构，在处理复杂逻辑推理与工具调用方面具有显著优势。本教程将系统性地梳理 OpenClaw 的底层逻辑、环境配置及实战开发，并重点集成了一个针对**数学证明与理论物理推导**的高阶应用案例——通过封装数学运算（Mathematica/Cadabra2）、知识库检索、LaTeX 自动化书写及结果验证四大 Skill，展示如何利用 OpenClaw 解决 LLM 在严谨科学运算中的幻觉问题。此外，教程还整合了 ClawPhD 等优秀社区案例，旨在为科研人员和开发者提供一站式的多智能体开发指南。
 
 ## 项目受众
 
-物理学、数学等科学领域的学生、教师或研究人员，其他需要借助LLM进行辅助符号运算来解决科研问题的人。
+1. **开发者与 AI 爱好者**：希望系统学习多智能体框架开发及 MCP 协议应用的工程人员。
+2. **科研人员（物理/数学方向）**：需要利用 AI Agent 辅助处理繁琐的符号运算、论文检索及 LaTeX 文稿生成的学者及学生。
+3. **计算机相关专业学生**：寻找高质量开源案例进行二次开发或作为多智能体研究入门参考。
 
 ## 在线阅读
 https://datawhalechina.github.io/repo-template
@@ -17,16 +18,21 @@ https://datawhalechina.github.io/repo-template
 
 |  章节名   | 简介 | 状态 |
 |  ----  | ---- | ---- |
-| [第1章  Skill vs MCP](https://github.com/flying-fish-2025/math-physics/blob/main/docs/chapter1/chapter1.md)  | 集成 `Cadabra2`、`Mathematica`、`SymPy`、知识库四类能力；Stateful Session：对象级操作（定义符号、表达式、方程）可跨多轮复用；透明过程：前端显示每一步工具调用参数和返回值；证明兜底：支持将结论代回原方程进行验证 | ✅ |
-| [第2章 对接OpenClaw](https://github.com/datawhalechina/repo-template/blob/main/docs/chapter2)  | 将第1章内容作为OpenClaw的应用 | 🚧 |
+| [第1章  OpenClaw概览](https://github.com/datawhalechina/repo-template/blob/main/docs/chapter1)  | 多智能体框架的发展背景；OpenClaw 的核心理念与应用价值 | 🚧 | 
+| [第2章 核心原理深度剖析](https://github.com/datawhalechina/repo-template/blob/main/docs/chapter2)  | 节点（Node）与边（Edge）的调度逻辑；Skill 与 MCP 协议的交互机制 | 🚧 |
+| [第3章 环境配置与基础上手](https://github.com/datawhalechina/repo-template/blob/main/docs/chapter3)  | 基础环境搭建与 API 接入；第一个简单的 Agent 实例开发 | 🚧 |
+| [第4章 高阶案例——数学与物理符号推理 Agent](https://github.com/flying-fish-2025/math-physics/blob/main/docs/chapter1/chapter4.md)  | 需求分析：解决科学推导中的幻觉挑战；核心 Skill 实现：数学软件封装、知识库检索、LaTeX 自动生成；工作流优化：结果验证与多轮修正逻辑 | ✅ |
+| [第5章 生态扩展与社区案例精选](https://github.com/datawhalechina/repo-template/blob/main/docs/chapter5)  | ClawPhD：博士科研助手配置指南；PaperClaw 与 ChineseResearchLaTeX：文献处理与写作工作流整合；如何贡献你自己的 OpenClaw 案例 | 🚧 |
+
 
 ## 贡献者名单
 
 | 姓名 | 职责 | 简介 |
 | :----| :---- | :---- |
-| 肖泽华 | 项目负责人 | 一个数学物理研究者 |
-| 陈可为 | 第1章贡献者1 | 机器学习在读研究生 |
-| 龙垭宇 | 第1章贡献者2 | 机器学习在读研究生 |
+| 龙垭宇 | 第1、2章贡献者 | 机器学习在读研究生 |
+| 肖泽华 | 第3、4章贡献者 | 数学物理研究者 |
+| 陈可为 | 第5章贡献者 | 机器学习在读研究生 |
+
 
 
 ## 参与贡献
