@@ -3,8 +3,7 @@
 > ⚠️ Alpha内测版本警告：此为早期内部构建版本，尚不完整且可能存在错误，欢迎大家提Issue反馈问题或建议。
 
 
-完整环境配置请看：`docs/CONFIG_SETUP_CN.md`
-
+完整环境配置请看：`16agent-proj/docs/CONFIG_SETUP_CN.md`
 ## 目标能力
 
 - 集成 `Cadabra2`、`Mathematica`、`SymPy`、知识库检索四类能力
