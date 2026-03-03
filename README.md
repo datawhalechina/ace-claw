@@ -29,7 +29,6 @@ https://datawhalechina.github.io/repo-template
 | 陈可为 | 第1章贡献者1 | 机器学习在读研究生 |
 | 龙垭宇 | 第1章贡献者2 | 机器学习在读研究生 |
 
-*注：表头可自定义，但必须在名单中标明项目负责人*
 
 ## 参与贡献
 
@@ -48,4 +47,3 @@ https://datawhalechina.github.io/repo-template
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
 
-*注：默认使用CC 4.0协议，也可根据自身项目情况选用其他协议*
