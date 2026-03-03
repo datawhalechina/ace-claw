@@ -18,7 +18,7 @@ https://datawhalechina.github.io/repo-template
 
 |  章节名   | 简介 | 状态 |
 |  ----  | ---- | ---- |
-| [第1章  Skill vs MCP]([https://github.com/flying-fish-2025/math-physics/docs/chapter1/README.md])  | 集成 `Cadabra2`、`Mathematica`、`SymPy`、知识库检索四类能力；Stateful Session：对象级操作（定义符号、表达式、方程）可跨多轮复用；透明过程：前端显示每一步工具调用参数和返回值；证明兜底：支持将结论代回原方程进行验证 | ✅ |
+| [第1章  Skill vs MCP](https://github.com/flying-fish-2025/math-physics/docs/chapter1/README.md)  | 集成 `Cadabra2`、`Mathematica`、`SymPy`、知识库检索四类能力；Stateful Session：对象级操作（定义符号、表达式、方程）可跨多轮复用；透明过程：前端显示每一步工具调用参数和返回值；证明兜底：支持将结论代回原方程进行验证 | ✅ |
 | [第2章 xxx](https://github.com/datawhalechina/repo-template/blob/main/docs/chapter2)  | xxx | ✅ |
 | [第3章 xxx](https://github.com/datawhalechina/repo-template/blob/main/docs/chapter3)  | xxx | ✅ |
 | 第4章  | xxx | 🚧 |
