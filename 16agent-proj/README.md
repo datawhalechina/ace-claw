@@ -36,6 +36,16 @@ mamba create -n math-agent-win python=3.11 pip -y
 micromamba run -n math-agent-win python -m pip install .
 ```
 
+项目使用 MCP 1.x 的 `FastMCP` 接口，依赖范围因此限制为 `mcp<2`；升级 MCP 2.x 时需要同步迁移服务端代码。客户端直接使用的 `httpx` 也已列为项目依赖，无需依赖 OpenAI SDK 间接安装它。
+
+安装后可运行离线启动回归：
+
+```bash
+python -m unittest discover -s tests -p test_runtime_smoke.py -v
+```
+
+测试通过本机 HTTP 服务验证客户端请求，并启动真实 MCP stdio 子进程验证工具调用和会话对象，无需 API 密钥或外部模型服务。
+
 2. 启动 MCP Server
 
 ```bash
