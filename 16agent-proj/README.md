@@ -112,6 +112,16 @@ powershell -ExecutionPolicy Bypass -File scripts/stop_webapp.ps1
 - 对最终结论：总是触发 `verify_substitution` 二次验证
 - 把“证明文本”看作报告层，真正可信的是每一步 MCP 返回结果
 
+## 离线回归测试
+
+在已安装项目依赖的环境中，从 `16agent-proj/` 运行：
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+测试通过本地 HTTP 响应替代模型服务，运行真实 MCP 工具与 SymPy 求解、自动验证及一键复验，不需要 API 密钥。
+
 ## 下一步（建议）
 
 - 对接真实向量数据库（Milvus/Qdrant）替换本地文本检索

@@ -209,16 +209,21 @@ class MCPToolExecutor:
         return MCPToolExecutor._safe_json_loads(m.group(0))
 
     @staticmethod
-    def _extract_verify_target(traces: list[ToolTrace]) -> tuple[str, str] | None:
-        eq = None
-        sol = None
+    def _extract_verify_target(traces: list[ToolTrace]) -> dict[str, str] | None:
+        target = None
         for t in traces:
             if t.tool == "sympy_dsolve_ode" and isinstance(t.result, dict):
+                target = None
                 eq = t.result.get("equation")
                 sol = t.result.get("solution")
-        if eq and sol:
-            return str(eq), str(sol)
-        return None
+                if eq and sol:
+                    target = {
+                        "eq_str": str(eq),
+                        "solution_str": str(sol),
+                        "y_name": t.args.get("y_name", "y"),
+                        "x_name": t.args.get("x_name", "x"),
+                    }
+        return target
 
     @staticmethod
     def _tool_result_ok(tool_name: str, result: Any) -> bool:
@@ -546,13 +551,12 @@ class MCPToolExecutor:
         verify_result = None
         target = self._extract_verify_target(traces)
         if target:
-            eq_str, sol_str = target
             yield {"type": "status", "message": "检测到 ODE 解，执行自动回代验证...", "model": model}
-            verify_result = sympy_verify_substitution(eq_str=eq_str, solution_str=sol_str, session_id=sid)
+            verify_result = sympy_verify_substitution(**target, session_id=sid)
             traces.append(
                 ToolTrace(
                     tool="sympy_verify_substitution",
-                    args={"eq_str": eq_str, "solution_str": sol_str},
+                    args=target,
                     result=verify_result,
                 )
             )
@@ -644,16 +648,13 @@ class MCPToolExecutor:
         return final_run
 
     def verify_last(self, last_run: dict[str, Any]) -> dict[str, Any]:
-        traces = last_run.get("traces", [])
-        eq = None
-        sol = None
-        for t in traces:
-            if t.get("tool") == "sympy_dsolve_ode":
-                result = t.get("result", {})
-                eq = result.get("equation")
-                sol = result.get("solution")
-        if not (eq and sol):
+        traces = [
+            ToolTrace(tool=t.get("tool", ""), args=t.get("args", {}), result=t.get("result", {}))
+            for t in last_run.get("traces", [])
+        ]
+        target = self._extract_verify_target(traces)
+        if not target:
             return {"ok": False, "reason": "未找到可回代验证的方程与解。"}
-        verify = sympy_verify_substitution(eq_str=str(eq), solution_str=str(sol))
-        return {"ok": True, "verify": verify, "equation": eq, "solution": sol}
+        verify = sympy_verify_substitution(**target)
+        return {"ok": True, "verify": verify, "equation": target["eq_str"], "solution": target["solution_str"]}
 
